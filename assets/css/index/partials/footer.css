@@ -1,0 +1,52 @@
+footer {
+  background: linear-gradient(to bottom, var(--cor-rosa2), var(--cor-verde));
+  color: var(--cor-branco);
+  padding: 20px 5px; /* Espaçamento interno vertical */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Conteúdo do footer */
+.footer-content {
+  max-width: 800px; /* Limita a largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Título principal */
+.footer-content h3 {
+  font-size: var(--f5);
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  font-family: var(--bold);
+}
+
+/* Parágrafos do footer */
+.footer-content p {
+  font-size: var(f--4); /* Tamanho menor para os parágrafos */
+  font-family: var(--regular);
+  margin: 5px 0; /* Espaçamento entre parágrafos */
+  line-height: 1.6; /* Altura de linha agradável */
+}
+
+/* Links no footer (se aplicável) */
+.footer-content a {
+  color: #1abc9c; /* Cor destacada */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+.footer-content a:hover {
+  text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .footer-content {
+    padding: 0 10px; /* Ajusta o preenchimento em telas menores */
+  }
+  
+  .footer-content h3 {
+    font-size: var(f--4); /* Reduz o tamanho do título */
+  }
+  
+  .footer-content p {
+    font-size: var(--f3); /* Reduz o tamanho do texto */
+  }
+}

@@ -1,0 +1,90 @@
+nav {
+  display: flex;
+  background: linear-gradient(to bottom, var(--cor-rosa),var(--cor-introsa), var(--cor-verde));
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  padding: 0 60px;
+  z-index: 10;
+  border: 1px solid var(--cor-cinza);/*Verificar cor para separar*/
+}
+nav img.logo {
+  width: 140px;
+  max-width: 140px;
+  height: auto;
+  margin-left: -50px;
+}
+nav .opcoes {
+  display: flex;
+  align-items: center;
+}
+nav .opcoes a {
+  font-family: var(--regular);
+  font-size: var(--f3);
+  color: var(--cor-branco);
+  margin: 0 0 0 40px;
+  transition: color 0.3s ease-in-out;
+}
+nav .opcoes a:hover {
+  color: var(--cor-preto) !important;
+  font-family: var(--bold);
+  font-size: var(--f3);
+}
+/*Dropdown*/
+nav .dropdown {
+  position: relative;
+  display: inline-block;
+}
+nav .dropdown a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+nav .dropdown a::after {
+  content: '\25BE'; /* Código para seta para baixo */
+  font-size: 1.3em;
+  margin-top: 5px;
+  color: var(--cor-branco);
+  transition: transform 0.3s ease-in-out;
+}
+nav .dropdown:hover a::after {
+  transform: rotate(180deg);
+  color: var(--cor-preto);
+}
+nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--cor-verde);
+  box-shadow: 0 8px 16px #00000099;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 1;
+  width: 160px;
+  left: 100%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+}
+nav .dropdown-content a {
+  color: var(--cor-branco);
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  font-size: var(--f3);
+  font-family: var(--regular);
+  margin-left: 0;
+}
+nav .dropdown-content a::after {
+    content: none; /* Remover setas dos links suspensos */
+}
+nav .dropdown-content a:hover {
+  background-color: var(--cor-verde); 
+  color: var(--cor-rosa) !important;
+}
+nav .dropdown:hover .dropdown-content {
+  display: block;
+}
